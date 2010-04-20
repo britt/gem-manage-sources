@@ -1,40 +1,12 @@
-= gem-check-sources
+= gem-manage-sources
 
-gem-check-sources keeps your local list of gem sources in sync and removes any gem servers that might be unavailable.
+This repository is no longer maintained.  gem-manage-sources is now gem-check-sources http://github.com/britt/gem-check-sources
 
-== Why?
+== Why the name change?
 
-Imagine you work at a company that hosts its own gem server within the corporate network.  At work you need to install and update gems hosted on the corporate
-server, but when you take your laptop home and try to work on a side project all your remote gem commands fail.  
-
-So, you end up typing 'gem sources -a' and 'gem sources -r' a lot.
-
-gem-check-sources solves this problem by maintaining two list of gem servers (active and inactive).  If a server is unavailable it gets put on the inactive list and removed from your gem sources.  It will get added back when it becomes available again.
-
-== Installation
-
-  gem install gem-check-sources
-
-== Usage
+Previously gem-manage-sources was intended to be a replacement for gem sources.  This was overkill.  I've simplified everything and replaced the four different commands for managing your gem sources with one command that does everything:
 
   gem check_sources
-
-That's it.  If something is inactive and you want to add it back just run the command again.
-
-== Links
-
-* Issue tracking: http://github.com/britt/gem-manage-sources/issues
-* Code Metrics: http://getcaliper.com/caliper/project?repo=git://github.com/britt/gem-manage-sources.git
-
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
 
 == Copyright
 
